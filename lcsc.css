@@ -1,0 +1,30 @@
+/* Injected CSS to enlarge thumbnails */
+:root{
+  --img-width: 500px;
+  --img-extra-width: (var(--img-width) - 100px);
+}
+
+.product-table .product-img{
+  width: var(--img-width);
+  height: var(--img-width);
+}
+
+.product-table .table-area table .fixed-column.column-img{
+  width: var(--img-width);
+}
+
+.product-table .product-img > .v-image.v-responsive, .product-table .table-area table td{
+  height: var(--img-width);
+}
+
+.product-table .table-area table{
+  margin-left: calc( var(--img-extra-width) );
+}
+
+.product-table .table-area table .fixed-column.column-price{
+  left: calc( 100px + var(--img-extra-width) );
+}
+
+.product-table .table-area table .fixed-column.column-qty{
+  left: calc( 380px + var(--img-extra-width) );
+}
